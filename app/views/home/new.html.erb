@@ -1,0 +1,105 @@
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Weather App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">     
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+         
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="jumbotron" id=<%= @api_color %> >
+  <h1 class="display-4"><%= @final_output %></h1>
+  <p class="lead">This is the current AIR Qulity </p>
+  <hr class="my-4">
+  <p>Hit reaload in your web browser to update the reading.....</p>
+  <p class="lead">
+    <a class="btn btn-info btn-lg" href="https://docs.airnowapi.org/CurrentObservationsByZip/query" role="button">Click Me</a>
+  </p>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid" >
+
+<div class= "container" align="center">
+
+<h1 >AirNow API</h1>
+<p>The Environmental Protection Agency’s AirNow API (AirNowAPI.org) is for software developers,
+researchers, the media, and the public to retrieve air quality forecasts and data in real time. The AirNow API suite of tools includes web services, data feeds, and other file products.
+An AirNow API account is required to access these services and feeds. Sign up for an account on
+the Log In page to get started. check Click Me......</p>
+</div>
+</div>
+
+
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"class="table-secondary">Daily AQI Color</th>
+      <th scope="col" class="table-secondary">Levels of Concern</th>
+      <th scope="col"class="table-secondary">Values of Index</th>
+      <th scope="col"class="table-secondary">Description of Air Quality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="bg-success">Green</th>
+      <td class="bg-success">Good</td>
+      <td class="bg-success">0 to 50/td>
+      <td class="bg-success">Air quality is satisfactory, and air pollution poses little or no risk.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="yellow" >yellow</th>
+      <td id="yellow">Moderate</td>
+      <td id="yellow">51-100</td>
+      <td id="yellow">Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="orange">orange</th>
+      <td id="orange">Unhealthy for Sensitive Groups</td>
+      <td id="orange">101-200</td>
+      <td id="orange">Members of sensitive groups may experience health effects. The general public is less likely to be affected.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="red">red</th>
+      <td id="red">Unhealthy</td>
+      <td id="red">201-300</td>
+      <td id="red">Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="purple">purple</th>
+      <td id="purple">Very Unhealthy</td>
+      <td id="purple">301-400</td>
+      <td id="purple">Health alert: The risk of health effects is increased for everyone.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="maroon">Maroon</th>
+      <td id="maroon">Hazardous</td>
+      <td id="maroon">401-500</td>
+      <td id="maroon">Health warning of emergency conditions: everyone is more likely to be affected.</td>
+    </tr>
+    <tr>
+      <th scope="row" id="gray">Gray</th>
+      <td id="gray"> Error</td>
+      <td id="gray"></td>
+      <td id="gray">ZIP CODE is Invalid</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
